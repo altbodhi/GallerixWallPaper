@@ -21,7 +21,7 @@ let loadImage (url, storeTo) =
     match (Http.Request url).Body with
     | Binary bytes ->
         let fileName =
-            Path.Combine(storeTo, Path.GetFileName(url))
+            Path.Combine(storeTo, Path.GetFileName url)
 
         File.WriteAllBytes(fileName, bytes)
         Ok fileName
@@ -31,7 +31,7 @@ let toJson x =
     System.Text.Json.JsonSerializer.Serialize x
 
 let isNew (src: string, dir) =
-    Path.Combine(dir, Path.GetFileName(src))
+    Path.Combine(dir, Path.GetFileName src)
     |> File.Exists
     |> not
 
@@ -40,4 +40,4 @@ let isRollback () =
     |> Array.contains "rollback"
 
 let args () =
-    Environment.GetCommandLineArgs()
+    Environment.GetCommandLineArgs() |> Array.tail

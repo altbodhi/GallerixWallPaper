@@ -60,3 +60,5 @@ nunit-*.xml
 gallerix/
 gallerix.log
 
+
+.fake
