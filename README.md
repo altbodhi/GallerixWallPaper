@@ -8,6 +8,6 @@ Wallpaper changer for windows from Gallerix last pic of day
 4. restart-computer (in pwsh)
 
 ## changes:
-    **2026-07-16:**
+    2026-07-16:
         1. add rollback option - attempt load last of not loaded images (only news by default)
            using: `dotnet run -- rollback` or `GallerixWallPaper.exe rollback`
