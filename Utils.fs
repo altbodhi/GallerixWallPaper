@@ -38,3 +38,6 @@ let isNew (src: string, dir) =
 let isRollback () =
     Environment.GetCommandLineArgs()
     |> Array.contains "rollback"
+
+let args () =
+    Environment.GetCommandLineArgs()

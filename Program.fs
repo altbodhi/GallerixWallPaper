@@ -1,7 +1,7 @@
 open GallerixWallPaper
 
 Logger.init "gallerix.log"
-Logger.log $"Load image"
+"start with [" + System.String.Join(",", Utils.args()) + "]" |> Logger.log
 let out = Utils.makeDir "gallerix"
 let days = Gallerix.getDays () |> Async.RunSynchronously |> List.sortByDescending _.day
 let last = days |> List.head
