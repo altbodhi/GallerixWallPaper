@@ -10,6 +10,7 @@
     <Compile Include="Utils.fs" />
     <Compile Include="Logger.fs" />
     <Compile Include="Gallerix.fs" />
+    <Compile Include="MainCore.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
