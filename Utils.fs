@@ -34,3 +34,7 @@ let isNew (src: string, dir) =
     Path.Combine(dir, Path.GetFileName(src))
     |> File.Exists
     |> not
+
+let isRollback () =
+    Environment.GetCommandLineArgs()
+    |> Array.contains "rollback"
